@@ -21,12 +21,7 @@ let options =
                 loader: 'babel-loader',
                 query:
                 {
-                    presets: ['es2015', 'stage-0', 'preact'],
-                    plugins:
-                    [
-                        [ 'transform-define', '../config.js' ],
-                        [ 'transform-define', './js/DataHeader.js' ]
-                    ],
+                    presets: ['es2015', 'stage-0', 'react'],
                 }
             },
 			{
