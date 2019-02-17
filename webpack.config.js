@@ -20,8 +20,7 @@ let options =
                 loader: 'babel-loader',
                 query:
                 {
-                    presets: ['@babel/react'],
-                    plugins: ['@babel/proposal-class-properties']
+                    presets: ['es2015', 'react'],
                 }
             },
 			{
