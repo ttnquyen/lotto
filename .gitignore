@@ -1,0 +1,8 @@
+data/
+release/
+node_modules/
+
+*.bk.js
+npm-debug.log
+package-lock.json
+DataHeader.js
