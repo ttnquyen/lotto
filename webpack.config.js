@@ -1,7 +1,6 @@
 const path = require('path')
 const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-const UglifyJSPlugin = require('uglifyjs-webpack-plugin')
 
 let options =
 {
@@ -69,22 +68,11 @@ let options =
     ],
     resolveLoader:
     {
-        modules: [path.resolve('./node_modules'), process.env.NODE_PATH],
+        modules: [path.resolve('./node_modules')],
     },
     resolve:
     {
-        modules: [path.resolve('./node_modules'), process.env.NODE_PATH],
+        modules: [path.resolve('./node_modules')],
     },
-}
-if (process.env.NODE_ENV == 'production')
-{
-    options.plugins.push(new UglifyJSPlugin(
-    {
-        uglifyOptions:
-        {
-            compress: { keep_fnames: true },
-            mangle: { keep_fnames: true },
-        }
-    }))
 }
 module.exports = options
